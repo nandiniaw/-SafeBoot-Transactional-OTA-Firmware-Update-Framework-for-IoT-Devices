@@ -1,0 +1,22 @@
+idf_component_register(
+    SRCS
+        "hello_world_main.c"
+        "ota_transaction.c"
+        "ota_risk_engine.c"
+        "ota_version.c"
+        "ota_downloader.c"
+        "wifi_manager.c"
+    INCLUDE_DIRS "."
+    REQUIRES
+        nvs_flash
+        app_update
+        esp_timer
+        esp_https_ota
+        esp_http_client
+        esp_wifi
+        esp_event
+        esp_netif
+        esp_system
+    EMBED_TXTFILES
+        "server_cert.pem"
+)
